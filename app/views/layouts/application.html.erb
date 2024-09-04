@@ -8,6 +8,11 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script>
+      window.ENV = { MAPBOX_API_KEY: "<%= ENV['MAPBOX_API_KEY'] %>" }
+    </script>
+
+    <%= tag :meta, name: :mapbox_key, content: ENV['MAPBOX_API_KEY'] %>
   </head>
 
   <body>
