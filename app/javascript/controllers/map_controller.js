@@ -13,6 +13,7 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
+      // here in style i can put my proxy defined in routes
       style: 'mapbox://styles/segundorebaza/clx2q37p202d301qp6vbu2cx8' // style URL
       // center: [-74.5, 40], // starting position [lng, lat]
       // zoom: 9, // starting zoom

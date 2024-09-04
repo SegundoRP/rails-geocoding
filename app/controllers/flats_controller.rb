@@ -15,6 +15,11 @@ class FlatsController < ApplicationController
     end
   end
 
+  def proxy
+    response = HTTP.get("https://api.mapbox.com#{request.fullpath}", params: { access_token: ENV['MAPBOX_API_KEY'] })
+    render json: response.body, status: response.code
+  end
+
   # GET /flats/1 or /flats/1.json
   def show
   end
