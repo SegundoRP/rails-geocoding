@@ -8,6 +8,8 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
+    // mapboxgl.accessToken = window.ENV.MAPBOX_API_KEY;
+    // mapboxgl.accessToken = document.querySelector("meta[name='mapbox_key']").content;
 
     this.map = new mapboxgl.Map({
       container: this.element, // container ID
